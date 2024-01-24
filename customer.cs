@@ -1,3 +1,5 @@
+using System;
+
 public class Customer {
 
   public Customer(string name, int salario){
@@ -7,5 +9,5 @@ public class Customer {
 
     public string Name { get; set; }
     public string Cargo { get; set; }
-    public int Salario { get; set; } 
+    public double Salario { get; set; } 
 }

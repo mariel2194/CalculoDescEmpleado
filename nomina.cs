@@ -1,21 +1,27 @@
+using System;
+using System.Collections.Generic;
+
 public static class Nomina{
   
    public static double AFP = 2.87;
-   pubic static double ARS = 3.04;
+   public static double ARS = 3.04;
 
-  public double CalcularDescuento(Customer customer){
-  
-    double descuento = 0;
+  public static double CalcularDescuento(Customer customer){
+    
+    double totalDescuento, descuentoAFP, descuentoAFP = 0;
     if(customer.Salario <7000){
-      customer.Salario = 7000
-      double descuentoAFP = customer.Salario * AFP;
-      double descuentoARS = customer.Salario * ARS;
-      return descuentoAFP + descuentoARS;      
+      customer.Salario = 7000;
+      descuentoAFP = customer.Salario * AFP;
+      descuentoARS = customer.Salario * ARS;
+      totalDescuento= descuentoAFP + descuentoARS; 
+      return totalDescuento;
     }
-    if(customer.Descuentos.Contains(Descuentos.ARS)){
-      descuento += customer.Descuentos[Descuentos.ARS];
-    }
-    return descuento;
+    else (customer.Salario > 12000)
+    customer.Salario = 12000
+    descuentoAFP = customer.Salario * AFP;
+    descuentoARS = customer.Salario * ARS;
+    totalDescuento= descuentoAFP + descuentoARS; 
+    return totalDescuento;
   }
   
 }
