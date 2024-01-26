@@ -1,13 +1,15 @@
 using System;
 
-public class Customer {
+public class Employee
+{
 
-  public Customer(string name, int salario){
-   this.Name = name;
-   this.Salario = salario;
-  }
+    public Employee(string name, double salario) 
+    {
+        this.Name = name;
+        this.Salario = salario;
+    }
 
     public string Name { get; set; }
     public string Cargo { get; set; }
-    public double Salario { get; set; } 
+    public double Salario { get; set; }
 }

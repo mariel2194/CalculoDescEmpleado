@@ -1,13 +1,18 @@
 using System;
- 
 
-class Program {
-  public static void Main (string[] args) {
-    Console.WriteLine ("Ingrese el Nombre de un Cliente y su Sueldo separados por comas");
-    
-    Customer customer1 = new Customer(Console.ReadLine(), Convert.ToDouble(Console.ReadLine()));
 
-  Nomina.CalcularDescuento(customer1);
-    
-  }
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Ingrese el Nombre de un Cliente y su Sueldo separados por comas");
+
+        string[] employeeData = Console.ReadLine().Split(',');
+        Employee employee1 = new Employee(employeeData[0], 
+        Double.Parse(employeeData[1]));
+
+        double desc = Nomina.CalcularDescuento(employee1);
+        Console.WriteLine("El total de descuento es: " + desc);
+
+    }
 }
